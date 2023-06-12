@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Countdown Timer</title>
+</head>
+
+<body>
+
+    <!-- Top Jumbotron -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="p-5 jumbo">
+                <h1 class="jumbo-text text-center text-white display-1">Event Countdown Timer</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="form-container">
+        <!-- Form Section -->
+        <form action="" class="form-container container-fluid py-4">
+            <div class="row text-center">
+                <p class="fw-bold fs-4">Enter the name, date and time of an event to count down to.</p>
+                <div class="col-md-4">
+                    <div class="border rounded-3 bg-light p-3 mb-3">
+                        <h6 class="">Enter the name of the event</h6>
+                        <label class="form-label" for="event-name">e.g. "My birthday party"</label>
+                        <input class="form-control" type="text" id="event-name" name="event-name" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border rounded-3 bg-light p-3 mb-3">
+                        <h6>Enter the date of the event</h6>
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label" for="target-year">Year</label>
+                                <input class="form-control" type="text" id="target-year" name="target-year" required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="target-month">Month</label>
+                                <input class="form-control" type="text" id="target-month" name="target-month" required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="target-day">Day</label>
+                                <input class="form-control" type="text" id="target-day" name="target-day" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border rounded-3 bg-light p-3 mb-3">
+                        <h6>Enter the time of the event</h6>
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label" for="target-hour">Hours</label>
+                                <input class="form-control" type="text" id="target-hour" name="target-hour" required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="target-minute">Minutes</label>
+                                <input class="form-control" type="text" id="target-minute" name="target-minute"
+                                    required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="target-second">Seconds</label>
+                                <input class="form-control" type="day" id="target-second" name="target-second" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="startCountdown-jumbo-container container-fluid">
+            <div class="row">
+                <div class="startCountdown-jumbo p-5 text-center">
+                    <button type="button" id="startCountdown" class="btn">Start Countdown</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="jumbo-timer">
+
+        <div class="jumbo-timer-text-container container-fluid py-4">
+            <div class="row">
+                <div class="text-center">
+                    <h1 id="countdown" class="display-4"></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="stopCountdown-jumbo text-center p-5">
+                    <button type="button" id="stopCountdown" class="btn">Stop Countdown</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Invalid input</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="errorModalBody">
+                    <!-- Error message will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
